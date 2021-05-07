@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+void reverse(char str[], int count)
+{
+  int j;
+    printf("Your text is printed out in reversed order: ");
+
+    for(j = (count - 1); j >= 0; j--)    //Den skriver ut det omvända i arrayen.
+    {
+      putchar(str[j]);
+    }
+
+}
+
+
+int main(){
+int i;
+int count = 0;
+char arr[50];  //Skapar en array med 50 platser.
+char a;
+printf("Write something: ");
+while((a = getchar()) != '\n')     {       //getchar plockar in en char i taget. Så länge detinte är newline så körs loopen.
+      arr[count] = a;   //Varje char läggs in i arryen på plats 'count'
+      count++;
+  }
+reverse(arr, count);  //Anropar reverse-metoden
+return 0;
+}
