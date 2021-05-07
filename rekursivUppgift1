@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+void reverse()
+{
+  char a = getchar();   //Tar emot en char i taget från användarens input
+  if(a != '\n')  //Så länge det inte är newline körs if-satsen
+  {
+    reverse();    //Den kör reverse-metoden i reverse-metoden fram tills att en newline printas ut. Då kommer den föregående reverse-metoden att gå till putchar-metoden och skriva ut tecknet osv
+    putchar(a);
+  }
+
+}
+
+
+
+
+void main()
+{
+  printf("Write something: ");
+  reverse(); //anropa funbktionen
+}
